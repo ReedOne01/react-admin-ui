@@ -1,0 +1,68 @@
+@import "../../styles/variables.scss";
+
+.homeContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+  gap: 20px;
+
+  .box {
+    border: 1px solid $soft-color;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(173, 216, 230, 0.308);
+  }
+  .box1 {
+    grid-column: span 1;
+    grid-row: span 2;
+
+    .cont {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // border: 1px solid red;
+      margin-bottom: 15px;
+      padding: 0 5px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+
+      .photo {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .userDetails {
+        display: flex;
+        flex-direction: column;
+        // border: 1px solid red;
+      }
+      .email {
+        font-size: 12px;
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 500;
+        // border: 1px solid red;
+      }
+    }
+    .right {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .box4 {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  .box8 {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}

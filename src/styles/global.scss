@@ -1,0 +1,79 @@
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.main{
+  background-color: $main-bg;
+  font-family: "inter", sans-serif;
+  color: $main-color;
+}
+.container{
+  display: flex;
+}
+.menuContainer{
+  width: 250px;
+  padding: 5px 20px;
+  border-right: 2px solid $soft-bg;
+}
+.contentContainer{
+  padding: 5px 20px;
+  width: 100%;
+}
+.navbar{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 10px;
+  .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .icons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    .notifications{
+      display: flex;
+      align-items: center;
+    }
+    .notifications{
+      position: relative;
+      span{
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+      }
+    }
+    .userImg{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      img{
+        
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+}
