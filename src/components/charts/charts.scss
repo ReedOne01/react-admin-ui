@@ -1,43 +1,72 @@
 .charts {
-  //   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
+  justify-content: center;
+  // border: 1px solid red;
+  gap: 10px;
+
   .chartInfo {
     height: 100%;
     width: 100%;
     display: flex;
-    // justify-content: center;
+    flex: 3;
     flex-direction: column;
-    gap: 20px;
-    border: 1px solid red;
-    // justify-content: space-between;
-    // align-items: center;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    // border: 1px solid red;
 
     .userChart {
       display: flex;
-      flex: 1;
+      flex: 2;
       align-items: center;
       gap: 10px;
-      height: 100%;
+      font-size: 14px;
+      width: 100%;
+      // border: 1px solid blue;
+
       .logo {
         width: 20px;
         height: 20px;
       }
+      .total {
+        font-size: 12px;
+      }
     }
     .figure {
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.7rem;
+      // border: 1px solid red;
+    }
+    .view {
+      font-size: 12px;
     }
   }
   .chartDetails {
-    flex: 2;
-    background-color: purple;
+    flex: 3;
+    // background-color: purple;
+    display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    // background-color: blue;
     .chartPic {
-      //   height: 100%;
+      height: 60%;
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      // gap: 5px;
+      text-align: right;
+      justify-content: left;
+      .digit {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .text {
+        font-size: 12px;
+      }
     }
   }
 }

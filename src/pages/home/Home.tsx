@@ -1,13 +1,25 @@
 import "./home.scss";
 // import Image from "react-dom";
 
-import { topDealUsers } from "../../data";
+import {
+  barChartBoxVisit,
+  barChartBoxRevenue,
+  topDealUsers,
+  chartBoxUser,
+  chartBoxConversion,
+  ChartBoxRevenue,
+  chartBoxProducts,
+} from "../../data";
+import BarChartBox from "../../components/barChartBox/BarChartBox";
 import Charts from "../../components/charts/Charts";
+import PieChart from "../../components/pieChartBox/PieCharts";
+import AreaCharts from "../../components/areaChart/AreaCharts";
 
 const Home = () => {
   return (
     <div className="homeContainer">
       <span className="box box1">
+        <h2 className="title">Top Deals</h2>
         {topDealUsers.map((user) => (
           <div className="cont" key={user.id}>
             <div className="left">
@@ -22,21 +34,29 @@ const Home = () => {
         ))}
       </span>
       <span className="box box2">
-        <Charts />
+        <Charts {...chartBoxUser} />
       </span>
       <span className="box box3">
-        <Charts />
+        <Charts {...chartBoxConversion} />
       </span>
-      <span className="box box4">box4</span>
+      <span className="box box4">
+        <PieChart />
+      </span>
       <span className="box box5">
-        <Charts />
+        <Charts {...ChartBoxRevenue} />
       </span>
       <span className="box box6">
-        <Charts />
+        <Charts {...chartBoxProducts} />
       </span>
-      <span className="box box7">box7</span>
-      <span className="box box8">box8</span>
-      <span className="box box9">box9</span>
+      <span className="box box7">
+        <BarChartBox {...barChartBoxVisit} />
+      </span>
+      <span className="box box8">
+        <AreaCharts />
+      </span>
+      <span className="box box9">
+        <BarChartBox {...barChartBoxRevenue} />
+      </span>
     </div>
   );
 };

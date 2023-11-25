@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+.pieChartBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //   border: 1px solid red;
+  height: 100%;
+  gap: 0.8rem;
+  .title {
+    // margin-bottom: px;
+    // border: 1px solid yellow;
+  }
+
+  .secPart {
+    // border: 1px solid white;
+    display: flex;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 6px;
+    color: $soft-color;
+    .items {
+      //   display: flex;
+      box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .name {
+        font-size: 10px;
+      }
+
+      .dot {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+      }
+    }
+    .value {
+      font-size: 10px;
+    }
+  }
+}

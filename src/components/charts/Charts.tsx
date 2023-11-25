@@ -1,17 +1,6 @@
 import { Link } from "react-router-dom";
 import "./charts.scss";
-// import {
-//   LineChart,
-//   Line,
-//   XAxis,
-//   YAxis,
-//   CartesianGrid,
-//   Tooltip,
-//   Legend,
-//   ResponsiveContainer,
-// } from "recharts";
-
-import { ResponsiveContainer, LineChart, Line } from "recharts";
+import { ResponsiveContainer, LineChart, Line, Tooltip } from "recharts";
 
 const data = [
   {
@@ -57,34 +46,58 @@ const data = [
     amt: 2100,
   },
 ];
-const Charts = () => {
+
+type Props = {
+  color: string;
+  icon: string;
+  title: string;
+  dataKey: string;
+  number: number | string;
+  percentage: number | string;
+  chartData: object[];
+};
+const Charts = (props: Props) => {
   return (
     <div className="charts">
       <div className="chartInfo">
-        <div className="userChart">
-          <img src="/user.svg" className="logo" alt="" />
-          <span className="total">Total User</span>
-        </div>
-        <span className="figure">11.1123</span>
-        <Link to="/">
-          <span>View all</span>
+        <span className="userChart">
+          <img src={props.icon} className="logo" alt="" />
+          <span className="total">{props.title}</span>
+        </span>
+        <span className="figure">{props.number}</span>
+        <Link to="/" style={{ color: props.color }}>
+          <span className="view">View all</span>
         </Link>
       </div>
       <div className="chartDetails">
         <div className="chartPic">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart width={300} height={100} data={data}>
+          <ResponsiveContainer width="99%" height="100%">
+            <LineChart width={300} height={100} data={props.chartData}>
+              <Tooltip
+                contentStyle={{ background: "transparent", border: "none" }}
+                position={{ x: 5, y: 55 }}
+                labelStyle={{ display: "none" }}
+              />
+
               <Line
                 type="monotone"
-                dataKey="pv"
-                stroke="#8884d8"
+                dataKey={props.dataKey}
+                stroke={props.color}
                 strokeWidth={2}
+                dot={false}
               />
             </LineChart>
           </ResponsiveContainer>
         </div>
-        <span className="digit">45</span>
-        <span className="text">this month</span>
+        <div className="details">
+          <span
+            className="digit"
+            style={{ color: props.percentage > 0 ? "limegreen" : "tomato" }}
+          >
+            {props.percentage}%
+          </span>
+          <span className="text">this month</span>
+        </div>
       </div>
     </div>
   );
