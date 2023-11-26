@@ -1,9 +1,16 @@
-import "./user.scss"
+import DataTable from "../../components/dataTable/DataTable";
+import "./user.scss";
 
 const User = () => {
   return (
-    <div>user</div>
-  )
-}
+    <div className="users">
+      <div className="title">
+        <h2>Users</h2>
+        <button>Add New Users</button>
+      </div>
+      <DataTable />
+    </div>
+  );
+};
 
-export default User
+export default User;
