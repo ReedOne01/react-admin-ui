@@ -6,4 +6,17 @@
     gap: 20px;
     padding: 20px 0;
   }
+  .actions {
+    display: flex;
+    gap: 5px;
+
+    img {
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+  .dataGrid {
+    font-size: 13px;
+  }
 }
