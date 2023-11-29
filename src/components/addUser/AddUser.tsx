@@ -9,11 +9,23 @@ type Props = {
 
 const AddUser = (props: Props) => {
   return (
-    <div>
-      <h1 className="header">Add User</h1>
-      <div className="close">X</div>
-      <div className="container">
-        <label >{props.columns.}</label>
+    <div className="add">
+      <div className="modal">
+        <span className="close" onClick={() => props.setOpen(false)}>
+          X
+        </span>
+        <h2 className="header">Add new {props.slug}</h2>
+        <form>
+          {props.columns
+            .filter((item) => item.field !== "id" && item.field !== "img")
+            .map((item) => (
+              <div className="item">
+                <label>{item.headerName}</label>
+                <input type={item.type} placeholder={item.field} />
+              </div>
+            ))}
+          <button className="btn">ADD</button>
+        </form>
       </div>
     </div>
   );

@@ -28,17 +28,20 @@ const User = () => {
       headerName: "First name",
       width: 130,
       editable: true,
+      type: "string",
     },
     {
       field: "lastName",
       headerName: "Last name",
       width: 130,
       editable: true,
+      type: "string",
     },
     {
       field: "email",
       headerName: "Email",
       width: 150,
+      type: "email",
       editable: true,
     },
     {
@@ -51,7 +54,7 @@ const User = () => {
     {
       field: "createdAt",
       headerName: "Created At",
-      type: "date || string",
+      type: "Date || string",
       width: 110,
       // editable: true,
     },
@@ -77,10 +80,10 @@ const User = () => {
     <div className="users">
       <div className="title">
         <h2>Users</h2>
-        <button>Add New Users</button>
+        <button onClick={() => setOpen(true)}>Add New Users</button>
       </div>
       <DataTable slug="users" columns={columns} rows={userRows} />
-      {open && <AddUser slug="User" columns={columns} setOpen={setOpen} />}
+      {open && <AddUser slug="user" columns={columns} setOpen={setOpen} />}
     </div>
   );
 };

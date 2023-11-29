@@ -348,7 +348,7 @@ export const userRows = [
     email: "taom@gmail.com",
     phone: "123 456 789",
     createdAt: "01.02.2023",
-    // verified: true,
+    verified: true,
   },
   {
     id: 5,
