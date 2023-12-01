@@ -1,3 +1,5 @@
+import { GridColDef } from "@mui/x-data-grid";
+
 export const menu = [
   {
     id: 1,
@@ -399,5 +401,129 @@ export const userRows = [
     phone: "123 456 789",
     createdAt: "01.02.2023",
     // verified: true,
+  },
+];
+
+export const products = [
+  {
+    id: 1,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "PlayStation 5",
+    color: "Black",
+    producer: "Sony",
+    price: "$265.78",
+    createdAt: "12/03/1989",
+    instock: "true",
+  },
+  {
+    id: 2,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "Dell laptop",
+    color: "Ash",
+    producer: "Dell",
+    price: "$400",
+    createdAt: "12/03/1989",
+    instock: "No",
+  },
+  {
+    id: 3,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "XBox 5",
+    color: "Black",
+    producer: "Sony",
+    price: "$568.78",
+    createdAt: "12/03/2021",
+    instock: "true",
+  },
+  {
+    id: 4,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "Iphone 5",
+    color: "Red",
+    producer: "Apple",
+    price: "$265.78",
+    createdAt: "12/03/1989",
+    instock: "true",
+  },
+  {
+    id: 5,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "MacBook 5",
+    color: "White",
+    producer: "Apple",
+    price: "$200",
+    createdAt: "12/03/1989",
+    instock: "true",
+  },
+  {
+    id: 6,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "EarPod",
+    color: "Black",
+    producer: "Samsung",
+    price: "$7.78",
+    createdAt: "12/03/1989",
+    instock: "true",
+  },
+  {
+    id: 7,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "Bluetooth ",
+    color: "Blue",
+    producer: "Sony",
+    price: "$265.78",
+    createdAt: "12/03/1989",
+    instock: "true",
+  },
+  {
+    id: 8,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "PlayStation 5",
+    color: "Black",
+    producer: "Sony",
+    price: "$265.78",
+    createdAt: "12/03/1989",
+    instock: "true",
+  },
+  {
+    id: 9,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "PlayStation 5",
+    color: "Black",
+    producer: "Sony",
+    price: "$265.78",
+    createdAt: "12/03/1989",
+    instock: "true",
+  },
+  {
+    id: 10,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "PlayStation 5",
+    color: "Black",
+    producer: "Sony",
+    price: "$265.78",
+    createdAt: "12/03/1989",
+    instock: "true",
+  },
+  {
+    id: 11,
+    image:
+      "https://th.bing.com/th/id/OIP.7y5YdfvDolhp6FBn8u0w5AHaHa?rs=1&pid=ImgDetMain",
+    title: "PlayStation 5",
+    color: "Black",
+    producer: "Sony",
+    price: "$265.78",
+    createdAt: "12/03/1989",
+    instock: "true",
   },
 ];

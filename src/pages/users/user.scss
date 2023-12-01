@@ -5,6 +5,11 @@
     display: flex;
     gap: 20px;
     padding: 20px 0;
+
+    button {
+      padding: 2px 10px;
+      cursor: pointer;
+    }
   }
   .actions {
     display: flex;

@@ -1,3 +1,27 @@
-.home {
-  background-color: red;
+.products {
+  // background-color: red;
+
+  .title {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+
+    button {
+      padding: 2px 10px;
+      cursor: pointer;
+    }
+  }
+  .actions {
+    display: flex;
+    gap: 5px;
+
+    img {
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+  .dataGrid {
+    font-size: 13px;
+  }
 }
