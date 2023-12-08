@@ -5,13 +5,13 @@ import "./user.scss";
 import {
   // DataGrid,
   GridColDef,
-  GridValueGetterParams,
+  // GridValueGetterParams,
 } from "@mui/x-data-grid";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+// import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { useState } from "react";
 import AddUser from "../../components/addUser/AddUser";
 
-const User = () => {
+const Users = () => {
   const columns: GridColDef[] = [
     { field: "id", headerName: "ID", width: 90 },
 
@@ -88,4 +88,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default Users;

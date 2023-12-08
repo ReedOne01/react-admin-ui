@@ -66,7 +66,7 @@ const Products = () => {
         <h2>Products</h2>
         <button onClick={() => setOpen(true)}>Add New Product</button>
       </div>
-      <DataTable slug="users" columns={columns} rows={products} />
+      <DataTable slug="products" columns={columns} rows={products} />
       {open && <AddUser slug="products" columns={columns} setOpen={setOpen} />}
     </div>
   );
